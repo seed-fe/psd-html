@@ -1,0 +1,15 @@
+.public-header{
+	height: 110px;
+	background: blue;
+}
+.public-container{
+	position: relative;
+	margin: 0 auto;
+	width: 1100px;
+	height: 100px;
+	background: blue;
+}
+.public-footer{
+	height: 318px;
+	background: #3b3b3b;
+}
