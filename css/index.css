@@ -1,0 +1,67 @@
+/* banner */
+.index-banner {
+	position: relative;
+	background: #b3b3b3;
+}
+.index-banner-bg {
+	height: 570px;
+	overflow: hidden;
+}
+.index-banner-bg img {
+	margin: 0 auto;
+}
+.index-banner-text {
+	position: absolute;
+	top: 200px;
+	left: 50%;
+	margin-left: -388px;
+}
+.index-banner-text .text-logo {
+	width: 776px;
+	height: 117px;
+	background: url("../images/index-banner-text-logo.png")
+}
+.index-banner-text .text-info {
+	margin-top: 18px;
+	text-align: center;
+	color: #fff;
+}
+.index-banner-text .text-info .line {
+	display: inline-block;
+	width: 40px;
+	border-top: 1px solid #fff;
+	vertical-align: middle;
+}
+.index-banner-text .text-info .line .line-l{
+	margin-right: 26px;
+}
+.index-banner-text .text-info .line .line-r {
+	margin-left: 26px;
+}
+/* menu */
+.index-menu {
+	position: relative;
+	border-top: 4px solid #f34949;
+}
+.index-menu .menu-tips {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -78px;
+	width: 156px;
+	height: 75px;
+	text-align: center;
+	line-height: 65px;
+	color: #fff;
+	background: #f34949;
+}
+.index-menu .menu-tips:after {
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: 0;
+	height: 0;
+	border-left: 78px solid transparent;
+	border-right: 78px solid transparent;
+	border-bottom: 10px solid #fff;
+}

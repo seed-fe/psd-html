@@ -1,22 +1,24 @@
-body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, input, form, a, p, textarea{
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, input, form, a, p, textarea {
 	margin: 0;
 	padding: 0;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-ol, ul, li{
+ol, ul, li {
 	list-style: none;
 }
-a{
+a {
 	text-decoration: none;
+	display: block;
+	color: #fff;
 }
-img{
+img {
 	border: none;
 	display: block;
 }
-.clearfloat{
+.clearfloat {
 	zoom:1;
 }
-.clearfloat:after{
+.clearfloat:after {
 	display: block;
 	clear: both;
 	content: "";
