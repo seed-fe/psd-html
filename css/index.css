@@ -65,3 +65,120 @@
 	border-right: 78px solid transparent;
 	border-bottom: 10px solid #fff;
 }
+.index-menu .menu-list {
+	margin-top: 150px;
+    /*这里的overflow: hidden和后面的width: 1160px可以让后面的margin-right: 60px在一行放下*/
+	overflow: hidden;
+}
+.index-menu .menu-list ul {
+	width: 1160px;
+}
+.index-menu .menu-item {
+	width: 520px;
+	float: left;
+	margin-right: 60px;
+	margin-bottom: 56px;
+}
+.index-menu .menu-item .title, .index-menu .menu-item .line {
+	float: left;
+}
+.index-menu .menu-item .price {
+	float: right;
+}
+.index-menu .menu-item .title {
+	width: 230px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: #555;
+}
+.index-menu .menu-item .comment {
+	margin-top: 4px;
+	color: #b7b7b7;
+	font-size: 12px;
+}
+.index-menu .menu-item .line {
+	width: 192px;
+	margin-top: 10px;
+	border-top: 1px solid #e3e1e1;
+}
+.index-menu .expand {
+	margin: 0 auto;
+	width: 114px;
+	height: 32px;
+	padding-left: 14px;
+	border: 1px solid #b7b7b7;
+	font-size: 14px;
+	line-height: 32px;
+	color: #b7b7b7;
+}
+.index-menu .expand-seperate {
+    margin-left: 8px;
+}
+.index-menu .icon {
+	display: inline-block;
+	width: 11px;
+	height: 7px;
+	margin-left: 10px;
+	background: url("../images/icon.png") no-repeat;
+}
+.index-panel {
+    margin-top: 200px;
+}
+.index-panel-header h3 {
+    float: left;
+    font-size: 20px;
+    color: #3b3b3b;
+    font-weight: bold;
+    margin-right: 48px;
+}
+.index-panel-header .line {
+    float: left;
+    margin-top: 7px;
+    width: 200px;
+    border-top: 1px solid #e5e3e3;
+}
+.index-panel-header .btn-group {
+    /*inline-block有默认4px的边距，对其父元素font-size设为0可以清除这个间距*/
+    font-size: 0;
+    float: right;
+}
+.index-panel-header .btn {
+    display: inline-block;
+    margin-left: 11px;
+    width: 9px;
+    height: 9px;
+    background: #dedede;
+    border-radius: 50%;
+}
+.index-panel-content {
+    margin-top: 75px;
+}
+.index-food-list {
+    overflow: hidden;
+}
+.index-food-list ul {
+    width: 1160px;
+}
+.index-food-list .food-item {
+    float: left;
+    width: 230px;
+    margin-right: 60px;
+}
+.index-food-list .food-item .banner {
+    margin-bottom: 30px;
+    height: 202px;
+}
+.index-food-list .food-item .name {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.index-food-list .food-item .star-bar {
+    font-size: 0;
+}
+.index-food-list .food-item .star {
+    display: inline-block;
+    width: 12px;
+    height: 13px;
+}
