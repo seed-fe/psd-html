@@ -1,3 +1,5 @@
 * clearfloat的原理。
-* 页面在笔记本上显示太宽，media query响应式宽度或者百分比。
-* gulp css sprite。
+* 页面在笔记本上显示太宽，media query响应式宽度或者百分比，图片的响应式，字体的响应式。
+* gulp css sprite，图片合并，gulp css合并。
+* banner部分滑动，原生js实现。
+* gallery部分图片增加css3 transform。

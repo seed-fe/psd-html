@@ -31,6 +31,7 @@
 	width: 40px;
 	border-top: 1px solid #fff;
 	vertical-align: middle;
+    *margin-top: 22px;
 }
 .index-banner-text .text-info .line .line-l{
 	margin-right: 26px;
@@ -134,7 +135,7 @@
 }
 .index-panel-header .line {
     float: left;
-    margin-top: 7px;
+    margin-top: 14px;
     width: 200px;
     border-top: 1px solid #e5e3e3;
 }
@@ -174,11 +175,36 @@
     font-size: 16px;
     margin-bottom: 10px;
 }
+.index-food-list .food-item .price {
+    float: right;
+}
 .index-food-list .food-item .star-bar {
     font-size: 0;
 }
 .index-food-list .food-item .star {
     display: inline-block;
     width: 12px;
-    height: 13px;
+    height: 12px;
+    margin-right: 5px;
+    background-image: url("../images/index-star.png");
+    background-repeat: no-repeat;
+}
+.index-food-list .food-item .nostar {
+    background-position: 0 -12px;
+}
+.index-pics {
+    height: 380px;
+    overflow: hidden;
+}
+.index-pics .pic-col {
+    float: left;
+}
+.index-pics .pic-col-s {
+    width: 287px;
+}
+.index-pics .pic-col-m {
+    width: 353px;
+}
+.index-pics .pic-col-l {
+    width: 460px;
 }

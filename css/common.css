@@ -9,7 +9,7 @@
 .public-header .header-logo a {
 	height: 54px;
 	width: 182px;
-	background: url("../images/index-header-logo.png");
+	background: url("../images/index-header-logo.png") no-repeat;
 }
 .public-header .header-nav {
 	float: right;
@@ -37,6 +37,7 @@
 	height: 218px;
 	background: #3b3b3b;
 	padding-top: 100px;
+    margin-top: 200px;
 }
 .public-footer .footer-col {
 	width: 230px;
@@ -54,5 +55,5 @@
 	height: 55px; 
 	margin-top: -16px;
 	margin-bottom: 12px;
-	background: url("../images/index-footer-logo.png");
+	background: url("../images/index-footer-logo.png") no-repeat;
 }
