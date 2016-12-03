@@ -1,9 +1,6 @@
 var gulp = require('gulp');
 // 调用 .create() 意味着你得到一个唯一的实例并允许您创建多个服务器或代理。
 var browserSync = require('browser-sync').create();
-gulp.task('default', function() {
-	console.log('hello gulp');
-});
 // 定义一个任务，任务的名字，该任务所要执行的一些操作
 gulp.task('watch', function() {
 	// 启动Browsersync服务。这将启动一个服务器，代理服务器（proxy）或静态服务器（server）

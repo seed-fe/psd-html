@@ -123,6 +123,7 @@
 	margin-left: 10px;
 	background: url("../images/icon.png") no-repeat;
 }
+/* featured dishes */
 .index-panel {
     margin-top: 200px;
 }
@@ -192,6 +193,7 @@
 .index-food-list .food-item .nostar {
     background-position: 0 -12px;
 }
+/* gallery */
 .index-pics {
     height: 380px;
     overflow: hidden;
@@ -207,4 +209,143 @@
 }
 .index-pics .pic-col-l {
     width: 460px;
+}
+/* 增加CSS3动画效果 */
+.index-pics img {
+    opacity: 0.8;
+}
+.index-pics img, figcaption {
+    -webkit-transition: all .35s;
+       -moz-transition: all .35s;
+        -ms-transition: all .35s;
+         -o-transition: all .35s;
+            transition: all .35s;
+}
+.index-pics figure {
+    position: relative;
+}
+.pic-col-m, .pic-row-1, .pic-row-2, .pic-col-l {
+    background: #2f0000;
+}
+.pic-col-m figcaption {
+    padding: 20px;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #333;
+    background: #fff;
+    margin: 5px;
+    text-align: center;
+    -webkit-transform: translate(-120px, 0px);
+       -moz-transform: translate(-120px, 0px);
+        -ms-transform: translate(-120px, 0px);
+         -o-transform: translate(-120px, 0px);
+            transform: translate(-120px, 0px);
+}
+.pic-col-m:hover figcaption {
+    -webkit-transform: translate(0px, 0px);
+       -moz-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+         -o-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+}
+.pic-col-m:hover img {
+    opacity: 0.5;
+}
+.pic-row-1 figure {
+    height: 251px;
+    width: 287px;
+    overflow: hidden;
+}
+.pic-row-1 figcaption {
+    position: absolute;
+    border-radius: 3px;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    color: #333;
+    background: #fff;
+    margin: 5px;
+    text-align: center;
+    opacity: 0;
+}
+.pic-row-1 img {
+    -webkit-transform: scale(1,1);
+       -moz-transform: scale(1,1);
+        -ms-transform: scale(1,1);
+         -o-transform: scale(1,1);
+            transform: scale(1,1);
+}
+.pic-row-1:hover img{
+    opacity: 0.5;
+    -webkit-transform: scale(1.2,1.2);
+       -moz-transform: scale(1.2,1.2);
+        -ms-transform: scale(1.2,1.2);
+         -o-transform: scale(1.2,1.2);
+            transform: scale(1.2,1.2);
+}
+.pic-row-1:hover figcaption {
+    opacity: 1;
+}
+.pic-row-2 figure {
+    height: 129px;
+    overflow: hidden;
+}
+.pic-row-2 figcaption {
+    position: absolute;
+    border-radius: 3px;
+    padding: 20px;
+    bottom: 0;
+    right: 0;
+    color: #333;
+    background: #fff;
+    margin: 5px;
+    text-align: center;
+    -webkit-transform: translate(120px, 0px);
+       -moz-transform: translate(120px, 0px);
+        -ms-transform: translate(120px, 0px);
+         -o-transform: translate(120px, 0px);
+            transform: translate(120px, 0px);
+}
+.pic-row-2:hover figcaption {
+    -webkit-transform: translate(0px, 0px);
+       -moz-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+         -o-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+}
+.pic-row-2:hover img {
+    opacity: 0.5;
+    -webkit-transform: translate(0px, -77px);
+       -moz-transform: translate(0px, -77px);
+        -ms-transform: translate(0px, -77px);
+         -o-transform: translate(0px, -77px);
+            transform: translate(0px, -77px);
+}
+.pic-col-l figcaption {
+    position: absolute;
+    border-radius: 3px;
+    padding: 20px;
+    top: 0;
+    right: 0;
+    color: #333;
+    background: #fff;
+    margin: 5px;
+    text-align: center;
+    -webkit-transform: translate(140px, 0px);
+       -moz-transform: translate(140px, 0px);
+        -ms-transform: translate(140px, 0px);
+         -o-transform: translate(140px, 0px);
+            transform: translate(140px, 0px);
+}
+.pic-col-l:hover figcaption {
+    -webkit-transform: translate(0px, 0px);
+       -moz-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+         -o-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+}
+.pic-col-l:hover img {
+    opacity: 0.5;
 }
