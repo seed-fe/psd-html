@@ -1,6 +1,6 @@
 * clearfloat的原理。√
 * 页面在笔记本上显示太宽，media query响应式宽度或者百分比，图片的响应式，字体的响应式。
 * gulp css sprite，图片合并，gulp css合并。
-* banner部分滑动，原生js实现。
-* gallery部分图片增加css3 transform。http://www.imooc.com/learn/473
-* css3实现网页平滑过渡效果http://www.imooc.com/learn/252 把这个页面改成四个页面平滑过渡？？还是fullpage.js 视差滚动（Parallax scrolling）。
+* featured dishes部分滑动，原生js实现。http://www.imooc.com/learn/18轮播效果，https://github.com/idiot/unslider
+* gallery部分图片增加css3 transform。http://www.imooc.com/learn/473 √
+* css3实现网页平滑过渡效果http://www.imooc.com/learn/252 把这个页面改成四个页面平滑过渡？？还是fullpage.js 视差滚动（Parallax scrolling）。http://www.imooc.com/learn/514

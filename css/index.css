@@ -9,6 +9,8 @@
 }
 .index-banner-bg img {
 	margin: 0 auto;
+    /*可变尺寸图像，用于响应式布局*/
+    /*max-width: 100%;*/
 }
 .index-banner-text {
 	position: absolute;
@@ -170,6 +172,16 @@
 .index-food-list .food-item .banner {
     margin-bottom: 30px;
     height: 202px;
+    opacity: 0.9;
+    -webkit-transition: all .25s;
+       -moz-transition: all .25s;
+        -ms-transition: all .25s;
+         -o-transition: all .25s;
+            transition: all .25s;
+}
+.index-food-list .food-item:hover .banner {
+    box-shadow: 1px 1px 2px #999;
+    opacity: 1;
 }
 .index-food-list .food-item .name {
     color: #555;
