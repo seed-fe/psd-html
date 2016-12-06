@@ -1,6 +1,14 @@
+/* .public-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+} */
 /* banner */
 .index-banner {
+    /*margin-top: 110px;*/
 	position: relative;
+    height: 557px;
+    overflow: hidden;
 	background: #b3b3b3;
 }
 .index-banner-bg {
@@ -21,10 +29,11 @@
 .index-banner-text .text-logo {
 	width: 776px;
 	height: 117px;
-	background: url("../images/index-banner-text-logo.png")
+	background: url("../images/index-banner-text-logo.png");
+    opacity: 0;
 }
 .index-banner-text .text-info {
-	margin-top: 18px;
+	margin-top: 800px;
 	text-align: center;
 	color: #fff;
 }
@@ -44,6 +53,7 @@
 /* menu */
 .index-menu {
 	position: relative;
+    height: 667px;
 	border-top: 4px solid #f34949;
 }
 .index-menu .menu-tips {
@@ -56,7 +66,7 @@
 	text-align: center;
 	line-height: 65px;
 	color: #fff;
-	background: #f34949;
+	background: #fff;
 }
 .index-menu .menu-tips:after {
 	position: absolute;
@@ -72,6 +82,7 @@
 	margin-top: 150px;
     /*这里的overflow: hidden和后面的width: 1160px可以让后面的margin-right: 60px在一行放下*/
 	overflow: hidden;
+    opacity: 0.7;
 }
 .index-menu .menu-list ul {
 	width: 1160px;
@@ -114,20 +125,25 @@
 	font-size: 14px;
 	line-height: 32px;
 	color: #b7b7b7;
+    opacity: 0;
 }
-.index-menu .expand-seperate {
+/* .index-menu .expand-seperate {
     margin-left: 8px;
-}
+} */
 .index-menu .icon {
 	display: inline-block;
 	width: 11px;
 	height: 7px;
-	margin-left: 10px;
+	margin-left: 8px;
 	background: url("../images/icon.png") no-repeat;
 }
 /* featured dishes */
 .index-panel {
-    margin-top: 200px;
+    /*margin-top: 200px;*/
+    /*height: 667px;*/
+}
+.index-panel-header {
+
 }
 .index-panel-header h3 {
     float: left;
@@ -360,4 +376,14 @@
 }
 .pic-col-l:hover img {
     opacity: 0.5;
+}
+/*fullpage cover*/
+#fp-nav ul li .fp-tooltip {
+    color: #f34949;
+}
+/*.slide {
+    height: 592px;
+}*/
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background: #f34949 none repeat scroll 0 0;
 }

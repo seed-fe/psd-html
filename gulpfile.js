@@ -6,7 +6,7 @@ gulp.task('watch', function() {
 	// 启动Browsersync服务。这将启动一个服务器，代理服务器（proxy）或静态服务器（server）
 	browserSync.init({
 		// 设置监听的文件，以gulpfile.js所在的根目录为起点，单个文件就用字符串，多个文件就用数组
-		files: ["*.html", "css/*.css", "js/*.js"],
+		files: ["*.html", "css/*.css", "script/*.js"],
 		// ，这里是静态服务器，监听3000端口
 		server: {
 			baseDir: "./"

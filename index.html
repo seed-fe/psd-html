@@ -2,254 +2,274 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 没有对移动端响应式布局，下面的viewport meta标签无法起到正确的效果 -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+    <link href="https://cdn.bootcss.com/fullPage.js/2.8.9/jquery.fullPage.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
     <title>Document</title>
 </head>
 <body>
-    <header class="public-header">
-        <div class="public-container clearfloat">
-            <div class="header-logo"><a href=""></a></div>
-            <nav class="header-nav">
-                <ul class="clearfloat">
-                    <li class="item"><a href="">Our Story</a></li>
-                    <li class="item"><a href="">Menu</a></li>
-                    <li class="item"><a href="">Reservations</a></li>
-                    <li class="item"><a href="">News</a></li>
-                    <li class="item"><a href="">Rviews</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header><!-- /header -->
-    <div class="index-banner">
-        <div class="index-banner-bg"><img src="images/demo1.jpg" alt="banner"></div>
-        <div class="index-banner-text">
-            <div class="text-logo"></div>
-            <p class="text-info">
-                <i class="line line-left"></i>
-                resto restaurant home page website template
-                <i class="line line-right"></i>
-            </p>
-        </div>
-    </div>
-    <div class="index-menu">
-        <div class="menu-tips">The menu</div>
-        <div class="public-container menu-list">
-            <ul class="clearfloat">
-                <li class="menu-item clearfloat">
-                    <div>
-                        <a class="title" href="">
-                            <h4>Voluptate cillum fugiat.</h4>
-                            <p class="comment">Cheese, tomato, mushrooms, onions.</p>
-                        </a>
-                    </div>
-                    <div class="line"></div>
-                    <div class="price">$50</div>
-                </li>
-                <li class="menu-item clearfloat">
-                    <div>
-                        <a class="title" href="">
-                            <h4>Arcu pede enim justo.</h4>
-                            <p class="comment">Tuna, Sweetcorn, Cheese.</p>
-                        </a>
-                    </div>
-                    <div class="line"></div>
-                    <div class="price">$45</div>
-                </li>
-                <li class="menu-item clearfloat">
-                    <div>
-                        <a class="title" href="">
-                            <h4>Metus varius laoreet.</h4>
-                            <p class="comment">Chicken, mozzarella cheese, onions.</p>
-                        </a>
-                    </div>
-                    <div class="line"></div>
-                    <div class="price">$62</div>
-                </li>
-                <li class="menu-item clearfloat">
-                    <div>
-                        <a class="title" href="">
-                            <h4>Cras dapibussemper nisi.</h4>
-                            <p class="comment">Pineapple, Minced Beef, Cheese.</p>
-                        </a>
-                    </div>
-                    <div class="line"></div>
-                    <div class="price">$32</div>
-                </li>
-                <li class="menu-item clearfloat">
-                    <div>
-                        <a class="title" href="">
-                            <h4>Donec sodales magna.</h4>
-                            <p class="comment">Tuna, Sweetcorn, Cheese.</p>
-                        </a>
-                    </div>
-                    <div class="line"></div>
-                    <div class="price">$25</div>
-                </li>
-                <li class="menu-item clearfloat">
-                    <div>
-                        <a class="title" href="">
-                            <h4>Quam semper libero.</h4>
-                            <p class="comment">Cheese, tomato, mushrooms, onions. </p>
-                        </a>
-                    </div>
-                    <div class="line"></div>
-                    <div class="price">$15</div>
-                </li>
-                <li class="menu-item clearfloat">
-                    <div>
-                        <a class="title" href="">
-                            <h4>Saugue velit cursus.</h4>
-                            <p class="comment">Pineapple, Minced Beef, Cheese.</p>
-                        </a>
-                    </div>
-                    <div class="line"></div>
-                    <div class="price">$30</div>
-                </li>
-                <li class="menu-item clearfloat">
-                    <div>
-                        <a class="title" href="">
-                            <h4>Nam eget dui Etiam.</h4>
-                            <p class="comment">Chicken, mozzarella cheese, onions.</p>
-                        </a>
-                    </div>
-                    <div class="line"></div>
-                    <div class="price">$35</div>
-                </li>
-            </ul>
-        </div>
-        <a class="expand" href="">load more <span class="expand-seperate">|</span><span class="icon"></span></a>
-    </div>
-    <div class="public-container index-panel">
-        <div class="index-panel-header clearfloat">
-            <h3>Featured Dishes</h3>
-            <div class="line"></div>
-            <div class="btn-group">
-                <a href="" class="btn active"></a>
-                <a href="" class="btn"></a>
-                <a href="" class="btn"></a>
-                <a href="" class="btn"></a>
+    <div id="fullpage">
+        <div class="section">
+            <div class="public-header" id="header">
+                <div class="public-container clearfloat">
+                    <div class="header-logo"><a href=""></a></div>
+                    <nav class="header-nav">
+                        <ul class="clearfloat">
+                            <li class="item"><a href="">Our Story</a></li>
+                            <li class="item"><a href="">Menu</a></li>
+                            <li class="item"><a href="">Reservations</a></li>
+                            <li class="item"><a href="">News</a></li>
+                            <li class="item"><a href="">Rviews</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div><!-- /header -->
+            <div class="index-banner">
+                <div class="index-banner-bg"><img data-src="images/demo1.jpg" alt="banner"></div>
+                <div class="index-banner-text">
+                    <div class="text-logo"></div>
+                    <p class="text-info">
+                        <i class="line line-left"></i>
+                        resto restaurant home page website template
+                        <i class="line line-right"></i>
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="index-panel-content index-food-list">
-            <ul class="clearfloat">
-                <li class="food-item">
-                    <a href="">
-                        <img class="banner" src="images/dish1.jpg" alt="">
-                        <div class="name">
-                            Fugiat nulla sint
-                            <span class="price">$30</span>
-                        </div>
-                        <div class="star-bar">
-                            <span  class="star"></span>
-                            <span  class="star"></span>
-                            <span  class="star"></span>
-                            <span  class="star"></span>
-                            <span  class="star nostar"></span>
-                        </div>
-                    </a>
-                </li>
-                <li class="food-item">
-                    <a href="">
-                        <img class="banner" src="images/dish2.jpg" alt="">
-                        <div class="name">
-                            Daute irure dolor
-                            <span class="price">$24</span>
-                        </div>
-                        <div class="star-bar">
-                            <span  class="star"></span>
-                            <span  class="star"></span>
-                            <span  class="star"></span>
-                            <span  class="star nostar"></span>
-                            <span  class="star nostar"></span>
-                        </div>
-                    </a>
-                </li>
-                <li class="food-item">
-                    <a href="">
-                        <img class="banner" src="images/dish3.jpg" alt="">
-                        <div class="name">
-                            Officia deserunt mollit
-                            <span class="price">$60</span>
-                        </div>
-                        <div class="star-bar">
-                            <span  class="star"></span>
-                            <span  class="star"></span>
-                            <span  class="star"></span>
-                            <span  class="star"></span>
-                            <span  class="star"></span>
-                        </div>
-                    </a>
-                </li>
-                <li class="food-item">
-                    <a href="">
-                        <img class="banner" src="images/dish4.jpg" alt="">
-                        <div class="name">
-                            Pim minim veniam
-                            <span class="price">$17</span>
-                        </div>
-                        <div class="star-bar">
-                            <span  class="star"></span>
-                            <span  class="star"></span>
-                            <span  class="star"></span>
-                            <span  class="star"></span>
-                            <span  class="star nostar"></span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="public-container index-panel">
-        <div class="index-panel-header clearfloat">
-            <h3>The Gallery</h3>
-            <div class="line"></div>
-        </div>
-        <div class="index-panel-content index-pics clearfloat">
-            <a class="pic-col pic-col-m" href="">
-                <figure>
-                    <figcaption>烤吐司条</figcaption>
-                    <img src="images/demo3.jpg" alt="">
-                </figure>
-            </a>
-            <div class="pic-col pic-col-s">
-                <a class="pic-row-1" href="">
-                    <figure>
-                        <figcaption>海鲜饭</figcaption>
-                        <img src="images/demo4.jpg" alt="">
-                    </figure>
-                </a>
-                <a class="pic-row-2" href="">
-                    <figure>
-                        <figcaption>芝士焗肉</figcaption>
-                        <img src="images/demo5.jpg" alt="">
-                    </figure>
-                </a>
+        <div class="section">
+            <div class="index-menu">
+                <div class="menu-tips">The menu</div>
+                <div class="public-container menu-list">
+                    <ul class="clearfloat">
+                        <li class="menu-item clearfloat">
+                            <div>
+                                <a class="title" href="">
+                                    <h4>Voluptate cillum fugiat.</h4>
+                                    <p class="comment">Cheese, tomato, mushrooms, onions.</p>
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="price">$50</div>
+                        </li>
+                        <li class="menu-item clearfloat">
+                            <div>
+                                <a class="title" href="">
+                                    <h4>Arcu pede enim justo.</h4>
+                                    <p class="comment">Tuna, Sweetcorn, Cheese.</p>
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="price">$45</div>
+                        </li>
+                        <li class="menu-item clearfloat">
+                            <div>
+                                <a class="title" href="">
+                                    <h4>Metus varius laoreet.</h4>
+                                    <p class="comment">Chicken, mozzarella cheese, onions.</p>
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="price">$62</div>
+                        </li>
+                        <li class="menu-item clearfloat">
+                            <div>
+                                <a class="title" href="">
+                                    <h4>Cras dapibussemper nisi.</h4>
+                                    <p class="comment">Pineapple, Minced Beef, Cheese.</p>
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="price">$32</div>
+                        </li>
+                        <li class="menu-item clearfloat">
+                            <div>
+                                <a class="title" href="">
+                                    <h4>Donec sodales magna.</h4>
+                                    <p class="comment">Tuna, Sweetcorn, Cheese.</p>
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="price">$25</div>
+                        </li>
+                        <li class="menu-item clearfloat">
+                            <div>
+                                <a class="title" href="">
+                                    <h4>Quam semper libero.</h4>
+                                    <p class="comment">Cheese, tomato, mushrooms, onions. </p>
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="price">$15</div>
+                        </li>
+                        <li class="menu-item clearfloat">
+                            <div>
+                                <a class="title" href="">
+                                    <h4>Saugue velit cursus.</h4>
+                                    <p class="comment">Pineapple, Minced Beef, Cheese.</p>
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="price">$30</div>
+                        </li>
+                        <li class="menu-item clearfloat">
+                            <div>
+                                <a class="title" href="">
+                                    <h4>Nam eget dui Etiam.</h4>
+                                    <p class="comment">Chicken, mozzarella cheese, onions.</p>
+                                </a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="price">$35</div>
+                        </li>
+                    </ul>
+                </div>
+                <a class="expand" href="">load more <span>|</span><span class="icon"></span></a>
+            </div>    
+        </div>       
+        <div class="section">
+            <div class="public-container index-panel">
+                <div class="index-panel-header clearfloat">
+                    <h3>Featured Dishes</h3>
+                    <div class="line"></div>
+                    <div class="btn-group">
+                        <a href="" class="btn active"></a>
+                        <a href="" class="btn"></a>
+                        <a href="" class="btn"></a>
+                        <a href="" class="btn"></a>
+                    </div>
+                </div>
+                <div class="index-panel-content index-food-list">
+                    <ul class="clearfloat">
+                        <li class="food-item">
+                            <a href="">
+                                <img class="banner" data-src="images/dish1.jpg" alt="">
+                                <div class="name">
+                                    Fugiat nulla sint
+                                    <span class="price">$30</span>
+                                </div>
+                                <div class="star-bar">
+                                    <span  class="star"></span>
+                                    <span  class="star"></span>
+                                    <span  class="star"></span>
+                                    <span  class="star"></span>
+                                    <span  class="star nostar"></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="food-item">
+                            <a href="">
+                                <img class="banner" data-src="images/dish2.jpg" alt="">
+                                <div class="name">
+                                    Daute irure dolor
+                                    <span class="price">$24</span>
+                                </div>
+                                <div class="star-bar">
+                                    <span  class="star"></span>
+                                    <span  class="star"></span>
+                                    <span  class="star"></span>
+                                    <span  class="star nostar"></span>
+                                    <span  class="star nostar"></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="food-item">
+                            <a href="">
+                                <img class="banner" data-src="images/dish3.jpg" alt="">
+                                <div class="name">
+                                    Officia deserunt mollit
+                                    <span class="price">$60</span>
+                                </div>
+                                <div class="star-bar">
+                                    <span  class="star"></span>
+                                    <span  class="star"></span>
+                                    <span  class="star"></span>
+                                    <span  class="star"></span>
+                                    <span  class="star"></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="food-item">
+                            <a href="">
+                                <img class="banner" data-src="images/dish4.jpg" alt="">
+                                <div class="name">
+                                    Pim minim veniam
+                                    <span class="price">$17</span>
+                                </div>
+                                <div class="star-bar">
+                                    <span  class="star"></span>
+                                    <span  class="star"></span>
+                                    <span  class="star"></span>
+                                    <span  class="star"></span>
+                                    <span  class="star nostar"></span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <a class="pic-col pic-col-l" href="">
-                <figure>
-                    <figcaption>四季豆肉丝面</figcaption>
-                    <img src="images/demo6.jpg" alt="">
-                </figure>
-            </a>
         </div>
-    </div>
-    <footer class="public-footer">
-        <div class="public-container">
-            <div class="footer-col"><p>New York Restaurant <br>3926 Anmoore Road <br>New York, NY 10014 <br><a href="tel:718-749-1714"></a>718-749-1714</p></div>
-            <div class="footer-col"><p>France Restaurant <br>68, rue  de la Couronne <br>75002 PARIS <br>02.94.23.69.56</p></div>
-            <div class="footer-col">
-                <a href="">Blog</a>
-                <a href="">Careers</a>
-                <a href="">Privacy Policy</a>
-                <a href="">Contact</a>
-            </div>
-            <div class="footer-col">
-                <div class="footer-logo"></div>
-                <div class="footer-info">© All Rights Reserved 2014. <br>Find  More at Pixelhint.com</div>
+        <div class="section">
+            <div class="public-container index-panel">
+                <div class="index-panel-header clearfloat">
+                    <h3>The Gallery</h3>
+                    <div class="line"></div>
+                </div>
+                <div class="index-panel-content index-pics clearfloat">
+                    <a class="pic-col pic-col-m" href="">
+                        <figure>
+                            <figcaption>烤吐司条</figcaption>
+                            <img data-src="images/demo3.jpg" alt="">
+                        </figure>
+                    </a>
+                    <div class="pic-col pic-col-s">
+                        <a class="pic-row-1" href="">
+                            <figure>
+                                <figcaption>海鲜饭</figcaption>
+                                <img data-src="images/demo4.jpg" alt="">
+                            </figure>
+                        </a>
+                        <a class="pic-row-2" href="">
+                            <figure>
+                                <figcaption>芝士焗肉</figcaption>
+                                <img data-src="images/demo5.jpg" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <a class="pic-col pic-col-l" href="">
+                        <figure>
+                            <figcaption>四季豆肉丝面</figcaption>
+                            <img data-src="images/demo6.jpg" alt="">
+                        </figure>
+                    </a>
+                </div>
             </div>
         </div>
-    </footer>
+        <div class="section">
+            <div class="public-footer">
+                <div class="public-container">
+                    <div class="footer-col"><p>New York Restaurant <br>3926 Anmoore Road <br>New York, NY 10014 <br><a href="tel:718-749-1714"></a>718-749-1714</p></div>
+                    <div class="footer-col"><p>France Restaurant <br>68, rue  de la Couronne <br>75002 PARIS <br>02.94.23.69.56</p></div>
+                    <div class="footer-col">
+                        <a href="">Blog</a>
+                        <a href="">Careers</a>
+                        <a href="">Privacy Policy</a>
+                        <a href="">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <div class="footer-logo"></div>
+                        <div class="footer-info">© All Rights Reserved 2014. <br>Find  More at Pixelhint.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/fullPage.js/2.8.9/vendors/jquery.easings.min.js"></script>
+    <script src="https://cdn.bootcss.com/fullPage.js/2.8.9/jquery.fullPage.min.js"></script>
+    <script src="https://cdn.bootcss.com/move.js/0.5.0/move.min.js"></script>
+    <script src="script/script.js"></script>
 </body>
 </html>
