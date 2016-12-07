@@ -158,8 +158,8 @@
     width: 200px;
     border-top: 1px solid #e5e3e3;
 }
-.index-panel-header .btn-group {
-    /*inline-block有默认4px的边距，对其父元素font-size设为0可以清除这个间距*/
+/* .index-panel-header .btn-group {
+    inline-block有默认4px的边距，对其父元素font-size设为0可以清除这个间距
     font-size: 0;
     float: right;
 }
@@ -170,15 +170,24 @@
     height: 9px;
     background: #dedede;
     border-radius: 50%;
-}
+} */
 .index-panel-content {
     margin-top: 75px;
+    position: relative;
+    overflow: auto;
+}
+.my-slider {
+    opacity: 0;
 }
 .index-food-list {
     overflow: hidden;
 }
+.food-list-item {
+    float: left;
+}
 .index-food-list ul {
     width: 1160px;
+    /*opacity: 0;*/
 }
 .index-food-list .food-item {
     float: left;
@@ -225,6 +234,7 @@
 .index-pics {
     height: 380px;
     overflow: hidden;
+    opacity: 0;
 }
 .index-pics .pic-col {
     float: left;
@@ -386,4 +396,15 @@
 }*/
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
     background: #f34949 none repeat scroll 0 0;
+}
+/*unslider*/
+.unslider-nav {
+    margin-top: 10px;
+}
+.unslider-nav ol li {
+    background: #dedede none repeat scroll 0 0;
+    border: 2px solid #dedede;
+    border-radius: 50%;
+    height: 13px;
+    width: 13px;
 }

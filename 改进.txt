@@ -2,12 +2,19 @@
 * 页面在笔记本上显示太宽，media query响应式宽度或者百分比，图片的响应式，字体的响应式。
 * gulp css sprite，图片合并，gulp css，js合并。
 * featured dishes部分滑动，原生js实现。http://www.imooc.com/learn/18 轮播效果，
-  https://github.com/idiot/unslider 
+  https://github.com/idiot/unslider √
   直接用fullpage实现轮播？×
 * gallery部分图片增加css3 transform。http://www.imooc.com/learn/473 √
 * css3实现网页平滑过渡效果http://www.imooc.com/learn/252 把这个页面改成四个页面平滑过渡？？×
 * 还是fullpage.js 视差滚动（Parallax scrolling）。http://www.imooc.com/learn/514，√
 * fullpage图片lazyload√
-* move.js添加页面加载动画效果√
+* move.js添加页面加载动画效果，第三第四也的效果增加一些时间，让他加载出来，和延迟加载配合，去除卡顿的效果√
 * CSS vs JS动画：谁更快？http://zencode.in/19.CSS-vs-JS%E5%8A%A8%E7%94%BB%EF%BC%9A%E8%B0%81%E6%9B%B4%E5%BF%AB%EF%BC%9F.html
   结论是velocity.js √
+* background-image的延迟加载，jQuery lazyload，慕课网搜索lazyload√
+  延迟加载的原理：
+  1. 页面中的img元素，如果没有src属性，浏览器就不会发出请求去下载图片（也就没有请求咯，也就提高性能咯），一旦通过javascript设置了图片路径，浏览器才会送请求。有点按需分配的意思，你不想看，就不给你看，你想看了就给你看~
+  2. 如何获取正真的路径，这个简单，现在正真的路径存在元素的“data-url”（这个名字起个自己认识好记的就行）属性里，要用的时候就取出来，再设置；
+  3. 判断元素是否进入或者即将进入视口，然后设置真正的路径。
+* 压缩图片webp× base64× png8，这个项目里的logo有alpha透明的效果，用png24，png8只有透明和不透明两种效果√
+  不用动画的简单小图标（且没有透明要求）就用png8，照片用JPEG，webp比较新，兼容要考虑，base64不适合于大图√

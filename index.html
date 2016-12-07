@@ -5,6 +5,8 @@
     <!-- 没有对移动端响应式布局，下面的viewport meta标签无法起到正确的效果 -->
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
     <link href="https://cdn.bootcss.com/fullPage.js/2.8.9/jquery.fullPage.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/unslider/2.0.3/css/unslider.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/unslider/2.0.3/css/unslider-dots.css" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
@@ -28,7 +30,7 @@
                 </div>
             </div><!-- /header -->
             <div class="index-banner">
-                <div class="index-banner-bg"><img data-src="images/demo1.jpg" alt="banner"></div>
+                <div class="index-banner-bg"><img src="images/demo1.jpg" alt="banner"></div>
                 <div class="index-banner-text">
                     <div class="text-logo"></div>
                     <p class="text-info">
@@ -134,80 +136,283 @@
                 <div class="index-panel-header clearfloat">
                     <h3>Featured Dishes</h3>
                     <div class="line"></div>
-                    <div class="btn-group">
-                        <a href="" class="btn active"></a>
-                        <a href="" class="btn"></a>
-                        <a href="" class="btn"></a>
-                        <a href="" class="btn"></a>
-                    </div>
                 </div>
-                <div class="index-panel-content index-food-list">
+                <div class="index-panel-content index-food-list my-slider">
                     <ul class="clearfloat">
-                        <li class="food-item">
-                            <a href="">
-                                <img class="banner" data-src="images/dish1.jpg" alt="">
-                                <div class="name">
-                                    Fugiat nulla sint
-                                    <span class="price">$30</span>
-                                </div>
-                                <div class="star-bar">
-                                    <span  class="star"></span>
-                                    <span  class="star"></span>
-                                    <span  class="star"></span>
-                                    <span  class="star"></span>
-                                    <span  class="star nostar"></span>
-                                </div>
-                            </a>
+                        <li class="food-list-item">
+                            <ul class="clearfloat">
+                                <li class="food-item">
+                                    <a href="">
+                                        <img class="banner" data-src="images/dish1.jpg" alt="">
+                                        <div class="name">
+                                            Fugiat nulla sint
+                                            <span class="price">$30</span>
+                                        </div>
+                                        <div class="star-bar">
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star nostar"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="food-item">
+                                    <a href="">
+                                        <img class="banner" data-src="images/dish2.jpg" alt="">
+                                        <div class="name">
+                                            Daute irure dolor
+                                            <span class="price">$24</span>
+                                        </div>
+                                        <div class="star-bar">
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star nostar"></span>
+                                            <span  class="star nostar"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="food-item">
+                                    <a href="">
+                                        <img class="banner" data-src="images/dish3.jpg" alt="">
+                                        <div class="name">
+                                            Officia deserunt mollit
+                                            <span class="price">$60</span>
+                                        </div>
+                                        <div class="star-bar">
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="food-item">
+                                    <a href="">
+                                        <img class="banner" data-src="images/dish4.jpg" alt="">
+                                        <div class="name">
+                                            Pim minim veniam
+                                            <span class="price">$17</span>
+                                        </div>
+                                        <div class="star-bar">
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star nostar"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="food-item">
-                            <a href="">
-                                <img class="banner" data-src="images/dish2.jpg" alt="">
-                                <div class="name">
-                                    Daute irure dolor
-                                    <span class="price">$24</span>
-                                </div>
-                                <div class="star-bar">
-                                    <span  class="star"></span>
-                                    <span  class="star"></span>
-                                    <span  class="star"></span>
-                                    <span  class="star nostar"></span>
-                                    <span  class="star nostar"></span>
-                                </div>
-                            </a>
+                        <li class="food-list-item">
+                            <ul class="clearfloat">
+                                <li class="food-item">
+                                    <a href="">
+                                        <img class="banner" data-src="images/dish1.jpg" alt="">
+                                        <div class="name">
+                                            Fugiat nulla sint
+                                            <span class="price">$30</span>
+                                        </div>
+                                        <div class="star-bar">
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star nostar"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="food-item">
+                                    <a href="">
+                                        <img class="banner" data-src="images/dish2.jpg" alt="">
+                                        <div class="name">
+                                            Daute irure dolor
+                                            <span class="price">$24</span>
+                                        </div>
+                                        <div class="star-bar">
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star nostar"></span>
+                                            <span  class="star nostar"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="food-item">
+                                    <a href="">
+                                        <img class="banner" data-src="images/dish3.jpg" alt="">
+                                        <div class="name">
+                                            Officia deserunt mollit
+                                            <span class="price">$60</span>
+                                        </div>
+                                        <div class="star-bar">
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="food-item">
+                                    <a href="">
+                                        <img class="banner" data-src="images/dish4.jpg" alt="">
+                                        <div class="name">
+                                            Pim minim veniam
+                                            <span class="price">$17</span>
+                                        </div>
+                                        <div class="star-bar">
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star nostar"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="food-item">
-                            <a href="">
-                                <img class="banner" data-src="images/dish3.jpg" alt="">
-                                <div class="name">
-                                    Officia deserunt mollit
-                                    <span class="price">$60</span>
-                                </div>
-                                <div class="star-bar">
-                                    <span  class="star"></span>
-                                    <span  class="star"></span>
-                                    <span  class="star"></span>
-                                    <span  class="star"></span>
-                                    <span  class="star"></span>
-                                </div>
-                            </a>
+                        <li class="food-list-item">
+                            <ul class="clearfloat">
+                                <li class="food-item">
+                                    <a href="">
+                                        <img class="banner" data-src="images/dish1.jpg" alt="">
+                                        <div class="name">
+                                            Fugiat nulla sint
+                                            <span class="price">$30</span>
+                                        </div>
+                                        <div class="star-bar">
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star nostar"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="food-item">
+                                    <a href="">
+                                        <img class="banner" data-src="images/dish2.jpg" alt="">
+                                        <div class="name">
+                                            Daute irure dolor
+                                            <span class="price">$24</span>
+                                        </div>
+                                        <div class="star-bar">
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star nostar"></span>
+                                            <span  class="star nostar"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="food-item">
+                                    <a href="">
+                                        <img class="banner" data-src="images/dish3.jpg" alt="">
+                                        <div class="name">
+                                            Officia deserunt mollit
+                                            <span class="price">$60</span>
+                                        </div>
+                                        <div class="star-bar">
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="food-item">
+                                    <a href="">
+                                        <img class="banner" data-src="images/dish4.jpg" alt="">
+                                        <div class="name">
+                                            Pim minim veniam
+                                            <span class="price">$17</span>
+                                        </div>
+                                        <div class="star-bar">
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star nostar"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="food-item">
-                            <a href="">
-                                <img class="banner" data-src="images/dish4.jpg" alt="">
-                                <div class="name">
-                                    Pim minim veniam
-                                    <span class="price">$17</span>
-                                </div>
-                                <div class="star-bar">
-                                    <span  class="star"></span>
-                                    <span  class="star"></span>
-                                    <span  class="star"></span>
-                                    <span  class="star"></span>
-                                    <span  class="star nostar"></span>
-                                </div>
-                            </a>
+                        <li class="food-list-item">
+                            <ul class="clearfloat">
+                                <li class="food-item">
+                                    <a href="">
+                                        <img class="banner" data-src="images/dish1.jpg" alt="">
+                                        <div class="name">
+                                            Fugiat nulla sint
+                                            <span class="price">$30</span>
+                                        </div>
+                                        <div class="star-bar">
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star nostar"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="food-item">
+                                    <a href="">
+                                        <img class="banner" data-src="images/dish2.jpg" alt="">
+                                        <div class="name">
+                                            Daute irure dolor
+                                            <span class="price">$24</span>
+                                        </div>
+                                        <div class="star-bar">
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star nostar"></span>
+                                            <span  class="star nostar"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="food-item">
+                                    <a href="">
+                                        <img class="banner" data-src="images/dish3.jpg" alt="">
+                                        <div class="name">
+                                            Officia deserunt mollit
+                                            <span class="price">$60</span>
+                                        </div>
+                                        <div class="star-bar">
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="food-item">
+                                    <a href="">
+                                        <img class="banner" data-src="images/dish4.jpg" alt="">
+                                        <div class="name">
+                                            Pim minim veniam
+                                            <span class="price">$17</span>
+                                        </div>
+                                        <div class="star-bar">
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star"></span>
+                                            <span  class="star nostar"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
+                    
                 </div>
             </div>
         </div>
@@ -270,6 +475,7 @@
     <script src="https://cdn.bootcss.com/fullPage.js/2.8.9/vendors/jquery.easings.min.js"></script>
     <script src="https://cdn.bootcss.com/fullPage.js/2.8.9/jquery.fullPage.min.js"></script>
     <script src="https://cdn.bootcss.com/move.js/0.5.0/move.min.js"></script>
+    <script src="https://cdn.bootcss.com/unslider/2.0.3/js/unslider-min.js"></script>
     <script src="script/script.js"></script>
 </body>
 </html>

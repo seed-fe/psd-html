@@ -42,8 +42,16 @@ $(function() {
                         .end();
                     break;
                 case 3:
+                    move('.my-slider')
+                        .set('opacity', 1)
+                        .duration('1s')
+                        .end();
                     break;
                 case 4:
+                    move('.index-pics')
+                        .set('opacity', 1)
+                        .duration('1s')
+                        .end();
                     break;
                 case 5:
                     break;
@@ -74,8 +82,14 @@ $(function() {
                         .end();
                     break;
                 case 3:
+                    move('.my-slider')
+                        .set('opacity', 0)
+                        .end();
                     break;
                 case 4:
+                    move('.index-pics')
+                        .set('opacity', 0)
+                        .end();
                     break;
                 case 5:
                     break;
@@ -99,5 +113,12 @@ $(function() {
                     break;
             }
         },
+    });
+    $('.my-slider').unslider({
+        dots: true,
+        // animation: 'fade',
+        arrows: false,
+        autoplay: true,
+        infinite: true
     });
 });
