@@ -7,7 +7,6 @@ const gutil = require('gulp-util');
 const cleanCSS = require('gulp-clean-css');
 const combiner = require('stream-combiner2');
 
-// const ghPages = require('gulp-gh-pages');
 
 const handleError = function(err) {
     var colors = gutil.colors;
@@ -24,7 +23,7 @@ gulp.task('watchdev', function() {
 	// 启动Browsersync服务。这将启动一个服务器，代理服务器（proxy）或静态服务器（server）
 	browserSync.init({
 		// 设置监听的文件，以gulpfile.js所在的根目录为起点，单个文件就用字符串，多个文件就用数组
-		files: ["*.html", "css/*.css", "script/*.js", "images/*.*"],
+		files: ["src/*.html", "src/css/*.css", "src/script/*.js", "src/images/*.*"],
 		// ，这里是静态服务器，监听3000端口
 		server: {
 			baseDir: "./src"
