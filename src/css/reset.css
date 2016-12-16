@@ -1,0 +1,33 @@
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, input, form, a, p, textarea,figure,figcaption {
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+ol, ul, li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	display: block;
+	color: #fff;
+}
+img {
+	border: none;
+	display: block;
+}
+/*IE6/7不支持:after 伪类，使用IE私有的zoom缩放属性防止包裹浮动元素的父元素高度塌陷，触发haslayout*/
+.clearfloat {
+	zoom:1;
+}
+/*IE8+和其他所有现代浏览器都支持:after+content，所以，对这些浏览器可以使用:after+content方法清除浮动子元素造成的父元素高度塌陷*/
+/*float的本意是文字环绕图片，所以本身的目的就是使浮动的子元素从父元素中溢出，从而让后面的文字环绕上来，用:after在父元素的最后添加一个block元素并且清除浮动，就能把父元素撑开，visibility: hidden和height: 0都是为了让添加的元素不显示出来，这里的两条.clearfloat结合起来使用在各种浏览器中都比较保险*/
+.clearfloat:after {
+	display: block;
+	clear: both;
+	content: "";
+	visibility: hidden;
+	height: 0;
+}

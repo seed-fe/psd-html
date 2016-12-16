@@ -1,0 +1,60 @@
+/* header */
+.public-header {
+	height: 110px;
+}
+.public-header .header-logo {
+	float: left;
+	margin-top: 40px;
+}
+.public-header .header-logo a {
+	height: 54px;
+	width: 182px;
+	background: url("../images/index-header-logo.png") no-repeat;
+}
+.public-header .header-nav {
+	float: right;
+	font-size: 14px;
+}
+.public-header .header-nav .item {
+	float: left;
+	margin-top: 44px;
+	margin-left: 50px;
+}
+.public-header .header-nav .item a {
+	color: #3b3b3b;
+}
+.public-header .header-nav .item a:hover {
+	text-decoration: underline;
+}
+/* container */
+.public-container {
+	position: relative;
+	margin: 0 auto;
+	width: 1100px;
+}
+/* foooter */
+.public-footer {
+	height: 467px;
+	background: #3b3b3b;
+	padding-top: 100px;
+	padding-bottom: 100px;
+    margin-top: 200px;
+}
+.public-footer .footer-col {
+	width: 230px;
+	float: left;
+	margin-right: 60px;
+	font-size: 16px;
+	color: #fff;
+	line-height: 1.8;
+}
+.public-footer .footer-col:last-child {
+	margin-right: 0;
+}
+.public-footer .footer-logo {
+	width: 182px;
+	height: 55px; 
+	margin-top: -16px;
+	margin-bottom: 12px;
+	background: url("../images/index-footer-logo.png") no-repeat;
+}
