@@ -6,6 +6,9 @@ const reload = browserSync.reload;
 const gutil = require('gulp-util');
 const cleanCSS = require('gulp-clean-css');
 const combiner = require('stream-combiner2');
+const del = require('del');
+const rev = require('gulp-rev');
+const lazypipe = require('lazypipe');
 
 
 const handleError = function(err) {
@@ -43,8 +46,16 @@ gulp.task('watchdev', function() {
 	console.log('Debugging in dev.');
 });
 /*发布阶段，css、js的合并压缩，image的压缩等（合并，重命名，防缓存……）*/
+/*由于给文件添加了哈希值，所以每次编译出来的css和js都是不一样的，这会导致有很多冗余文件，所以我们可以每次在生成文件之前，先将原来的文件全部清空。*/
+gulp.task('clean', function() {
+    return del([
+    	'dist/css/**/*',
+    	'dist/script/**/*',
+    	'rev/**/*'
+    ]);
+});
 /*如果开发阶段各种调试测试没问题了，就一次性压缩所有文件*/
-/*一次压缩所有CSS文件*/
+/*一次压缩所有CSS文件，当只有单个CSS文件的时候就不用concat，通过rev和rev.manifest和revCollector可以添加hash并重新导入html*/
 gulp.task('minifycss', function() {
     return gulp.src('src/css/**/*.css')
       .pipe(plugins.sourcemaps.init())
@@ -52,9 +63,31 @@ gulp.task('minifycss', function() {
       	// 设置支持的浏览器，这里是主要浏览器的最新两个版本
       	browsers: 'last 2 versions'
       }))
+      // 合并为all.js
+      .pipe(plugins.concat('all.css'))
       .pipe(cleanCSS())
+      // 添加hash编码
+      .pipe(plugins.rev())
       .pipe(plugins.sourcemaps.write('./'))
-      .pipe(gulp.dest('dist/css/'));
+      .pipe(gulp.dest('dist/css/'))
+      .pipe(plugins.rev.manifest())
+      .pipe(gulp.dest('rev/css'));
+});
+gulp.task('cssReplace', function() {
+	var cssFilter = plugins.filter('**/*.css', {restore: true});
+	var indexHtmlFilter = plugins.filter(['**/*', '!**/index.html'], {restore: true});
+    return gulp.src('src/index.html')
+    	// useref解析html文件里build注释的部分并且合并build注释部分包括的css/js文件，然后把html和合并的文件传递到流
+      .pipe(plugins.useref({}, lazypipe().pipe(plugins.sourcemaps.init, {loadMaps: true})))
+      .pipe(cssFilter)
+      .pipe(cleanCSS())
+      .pipe(cssFilter.restore)
+      .pipe(indexHtmlFilter)
+      .pipe(rev())
+      .pipe(indexHtmlFilter.restore)
+      .pipe(plugins.revReplace())
+      .pipe(plugins.sourcemaps.write('./'))
+      .pipe(gulp.dest('dist/'));
 });
 // 需要一次编译所有js文件就用这个
 gulp.task('uglifyjs', function () {
@@ -62,8 +95,11 @@ gulp.task('uglifyjs', function () {
         gulp.src('src/script/**/*.js'),
         plugins.sourcemaps.init(),
         plugins.uglify(),
+        plugins.rev(),
         plugins.sourcemaps.write('./'),
-        gulp.dest('dist/script/')
+        gulp.dest('dist/script/'),
+        plugins.rev.manifest(),
+        gulp.dest('rev/script')
     ]);
     combined.on('error', handleError);
     return combined;
@@ -76,7 +112,40 @@ gulp.task('images', function () {
         }))
         .pipe(gulp.dest('dist/images'));
 });
-/*复制HTML*/
+// 将处理过的CSS引入html，当CSS没有合并或者只有一个CSS文件的时候可以直接顺利引入，如果有合并操作就要用上面的cssReplace这个task
+gulp.task('reCollector', ['clean', 'minifycss'], function() {
+    return gulp.src(['rev/**/*.json', 'src/*.html'])
+      .pipe(plugins.revCollector({
+      	replaceReved: true,
+      	dirReplacements: {
+      		'css': 'dist/css'
+      	}
+      }))
+      .pipe(gulp.dest('dist'));
+});
+gulp.task('build', ['clean', 'images', 'uglifyjs'], function() {
+	var cssFilter = plugins.filter('**/*.css', {restore: true});
+	var indexHtmlFilter = plugins.filter(['**/*', '!**/index.html'], {restore: true});
+    return gulp.src(['rev/**/*.json', 'src/*.html'])
+      .pipe(plugins.revCollector({
+      	replaceReved: true,
+      	dirReplacements: {
+      		// rev-manifest.json文件中只有加了hash的文件名，需要通过dirReplacements指明路径信息
+      		'script': 'script'
+      	}
+      }))
+      .pipe(plugins.useref({}, lazypipe().pipe(plugins.sourcemaps.init, {loadMaps: true})))
+      .pipe(cssFilter)
+      .pipe(cleanCSS())
+      .pipe(cssFilter.restore)
+      .pipe(indexHtmlFilter)
+      .pipe(rev())
+      .pipe(indexHtmlFilter.restore)
+      .pipe(plugins.revReplace())
+      .pipe(plugins.sourcemaps.write('./'))
+      .pipe(gulp.dest('dist/'));
+});
+/*复制HTML，第二个参数是依赖任务的数组，数组里的这些任务是并行处理的*/
 gulp.task('html',['minifycss', 'uglifyjs', 'images'], function() {
     return gulp.src('src/*.html')
       .pipe(gulp.dest('dist/'));
