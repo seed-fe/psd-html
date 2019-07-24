@@ -63,7 +63,7 @@ gulp.task('minifycss', function() {
       	// 设置支持的浏览器，这里是主要浏览器的最新两个版本
       	browsers: 'last 2 versions'
       }))
-      // 合并为all.js
+      // 合并为all.css
       .pipe(plugins.concat('all.css'))
       .pipe(cleanCSS())
       // 添加hash编码
